@@ -1,0 +1,79 @@
+<html>
+<head>
+	<title> customer registration</title>
+	<script type="text/javascript">
+		function validate(){
+			if(document.frm_register.txt_customer_name.value==""){
+				alert("please enter your name");
+				return false;
+			}
+			if(document.frm_register.txt_password.value==""){
+				alert("please enter your password");
+				return false;
+			}
+			if(document.frm_register.txt_telephone.value==""){
+				alert("please enter your telephone");
+				return false;
+			}
+			male=document.frm_register.radio_gender[0].checked;
+			female=document.frm_register.radio_gender[1].checked;
+			if(!(male||female)){
+		
+				alert("select your gender");
+			return false;
+			}
+			
+
+			
+			if(document.frm_register.txt_address.value==""){
+				alert("please enter your addresss");
+				return false;
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<form name="frm_register"method=""action="">
+	<table align="center">
+		<tr>
+		<th colspan="2"><h1> Customer registeration</h1></th>
+		</tr>
+		<tr>
+			<td>customer name:</td>
+			<td><input type="text" name="txt_customer_name"></td>
+		</tr>
+		<tr>
+			<td> password:</td>
+			<td><input type="text" name="txt_password"></td>
+		</tr>
+		<tr>
+			<td>gender:</td>
+			<td><input type="radio" name="radio_gender">male<input type="radio" name="radio_gender">female</td>
+		</tr>
+		<tr>
+			<td>address:</td>
+			<td><textarea rows="5" cols="5" name="txt_address"></textarea></td>
+		</tr>
+		<tr>
+			<td>telephone:</td>
+			</td>
+			<td><input type="text" name="txt_telephone"></td>
+
+		</tr>
+		<tr>
+			<td>hobbies:</td>
+			<td><select name="hobbies">
+				<option value="r">reading</option>
+				<option value="w">writing</option>
+				<option value="s">singing</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="cmdsubmit" value="submit"  onclick=" return validate()"></td>
+		</tr>
+	</table>
+</body>
+
+</html>
